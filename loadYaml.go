@@ -1,3 +1,11 @@
+func main() {
+	// Load YAML data from file
+	data, err := loadYAML("example.yaml")
+	if err != nil {
+		log.Fatal(err)
+	}
+}
+
 // Function to load yamlfile unmarshal data into map with a slice of Gist
 // and finally return data (type: map of string of Gist)
 func loadYAML(filename string) (map[string][]Gist, error) {
